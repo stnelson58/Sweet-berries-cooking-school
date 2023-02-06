@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* You are not using the fonts given in the sigma file. */
 h1,h2,h3{
     font-family: "Lato", sans-serif;
 }
@@ -20,6 +20,9 @@ body{
     padding-right: 30px; */
     background-color: #E5E5E5;
 }
+
+/* Grid template areas haven’t been used to correctly display items at different positions in different viewports. */
+/* Making a main container to be grid to layout everything would be a good place to use grid template areas. */
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -113,6 +116,11 @@ line-height: 75px;
 color: #000000;
 
 }
+
+/* The images are not responsive. They don’t shrink on smaller screen sizes. */
+/* Always try to stay away from setting any heights, usually it results in problems when it comes to making the webpage responsive */
+/* Always try your best to stay away from using pixels (px) and use more responsive units such as percentages (%) instead.
+This will allow you to make your webpage more responsive a lot faster. */
 .slogan p{
     
 width: 600px;
@@ -239,6 +247,7 @@ padding-bottom: 50px;
 
 
 }
+/* Relative and absolute positioning weren’t used with the card icons. */
 .cooking-card1 img{
 
 align-self: flex-end;
@@ -282,6 +291,8 @@ footer h4{
 footer p{
     font-size: x-small;
 }
+/* The website is not fully responsive. There are some overflowing happening. For example, your cards are too big. */
+/* The hamburger menu has not been implemented for mobile screen sizes. */
 @media (max-width:768px){
     .grid-container{
         grid-template-rows: 70px 450px auto auto 50px;
